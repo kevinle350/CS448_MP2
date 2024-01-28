@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 def serve():
     if request.method == 'POST':
-        subprocess.Popen(['python', 'stress_cpu.py'])
+        subprocess.Popen(['python3', 'stress_cpu.py'])
         return 'CPU stress script started', 200
     else:
         hostname = socket.gethostname()    
